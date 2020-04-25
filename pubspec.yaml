@@ -1,0 +1,13 @@
+name: btc_address_validate
+version: 0.1.0
+description: A minimal library to validate Bitcoin addresses
+author: Dominik Spicher <dominikspicher@gmail.com>
+homepage: https://github.com/dspicher/btc_address_validate
+
+dependencies:
+
+dev_dependencies:
+    test: ^1.3.4
+
+environment:
+    sdk: ">=2.3.0 <3.0.0"
