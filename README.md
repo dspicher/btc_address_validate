@@ -5,6 +5,12 @@
 
 A small library to validate Bitcoin addresses.
 
+## Thanks
+
+To the excellent [base58check](https://pub.dartlang.org/packages/base58check) and [bech32](https://pub.dartlang.org/packages/bech32) packages.
+
+Partly inspired by the npm package [bitcoin-address-validation](https://github.com/ruigomeseu/bitcoin-address-validation).
+
 ## Examples
 
 ```dart
@@ -16,3 +22,7 @@ A small library to validate Bitcoin addresses.
   print(address.segwit);
   // => false
 ```
+
+## Alternatives
+
+[bitcoin_flutter](https://pub.dartlang.org/packages/bitcoin_flutter) also allows address validation. However, it lacks P2SH support.
