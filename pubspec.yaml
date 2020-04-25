@@ -5,6 +5,9 @@ author: Dominik Spicher <dominikspicher@gmail.com>
 homepage: https://github.com/dspicher/btc_address_validate
 
 dependencies:
+    bech32: any
+    base58check: any
+    equatable: any
 
 dev_dependencies:
     test: ^1.3.4
