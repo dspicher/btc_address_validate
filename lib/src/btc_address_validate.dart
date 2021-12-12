@@ -12,12 +12,12 @@ enum Network { mainnet, testnet }
 class Address extends Equatable {
   Address(this.type, this.network, this.segwit);
 
-  final Type type;
-  final Network network;
+  final Type? type;
+  final Network? network;
   final bool segwit;
 
   @override
-  List<Object> get props => [type, network, segwit];
+  List<Object?> get props => [type, network, segwit];
 }
 
 const Map<int, Network> versionToNetwork = {
@@ -50,7 +50,7 @@ Address validate(String address) {
   Base58CheckPayload decoded;
   try {
     decoded = codec.decode(address);
-  } catch (e) {
+  } on Exception catch (e) {
     throw Base58CheckException(e);
   }
   if (decoded.payload.length != 20) {
@@ -68,7 +68,7 @@ Address validateSegwit(String address) {
   Segwit decoded;
   try {
     decoded = segwit.decode(address);
-  } catch (e) {
+  } on Exception catch (e) {
     throw SegwitException(e);
   }
 
